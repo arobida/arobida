@@ -1,210 +1,100 @@
-<svg fill="none" viewBox="0 0 900 320" width="900" height="320" xmlns="http://www.w3.org/2000/svg">
-  <foreignObject width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+<svg viewBox="0 0 900 320" width="900" height="320" xmlns="http://www.w3.org/2000/svg">
+  <title>Andrew Robida — Product Engineer, Marine, Builder</title>
+  <defs>
+    <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#141414" fill-opacity="0.13"/>
+    </pattern>
+  </defs>
 
-        .c {
-          width: 900px; height: 320px;
-          background: #FFF3E4;
-          background-image: radial-gradient(#14141422 1.5px, transparent 1.5px);
-          background-size: 18px 18px;
-          position: relative; overflow: hidden;
-          font-family: 'JetBrains Mono', 'Courier New', monospace;
-          border: 4px solid #141414;
-        }
+  <!-- background -->
+  <rect width="900" height="320" fill="#FFF3E4"/>
+  <rect width="900" height="320" fill="url(#dots)"/>
 
-        /* ---- floating brutalist shapes ---- */
-        .shape {
-          position: absolute;
-          border: 4px solid #141414;
-          box-shadow: 6px 6px 0 0 #141414;
-        }
-        .s1 { /* yellow square */
-          width: 64px; height: 64px; background: #FFD23F;
-          top: 36px; left: 56px;
-          animation: float-a 7s ease-in-out infinite;
-        }
-        .s2 { /* pink circle */
-          width: 56px; height: 56px; background: #FF5DA2; border-radius: 50%;
-          top: 200px; left: 130px;
-          animation: float-b 8s ease-in-out infinite;
-        }
-        .s3 { /* green pill */
-          width: 90px; height: 40px; background: #3ECF8E; border-radius: 999px;
-          top: 60px; right: 90px;
-          animation: float-b 9s ease-in-out infinite;
-        }
-        .s4 { /* blue square */
-          width: 52px; height: 52px; background: #4D7CFE;
-          top: 190px; right: 60px;
-          animation: float-a 6.5s ease-in-out infinite;
-        }
-        .s5 { /* purple circle */
-          width: 36px; height: 36px; background: #A78BFA; border-radius: 50%;
-          top: 130px; left: 60px;
-          animation: float-c 7.5s ease-in-out infinite;
-        }
-        .s6 { /* orange square */
-          width: 40px; height: 40px; background: #FF8A3D;
-          top: 140px; right: 170px;
-          animation: float-c 8.5s ease-in-out infinite;
-        }
-        .spark {
-          position: absolute; border: none; box-shadow: none;
-          font-size: 34px; font-weight: 900; color: #141414;
-          font-family: 'Arial Black', Arial, sans-serif;
-        }
-        .sp1 { top: 30px; left: 200px; animation: spin 12s linear infinite; }
-        .sp2 { top: 150px; right: 40px; animation: spin 15s linear infinite reverse; }
-        .sp3 { top: 40px; right: 240px; animation: spin 18s linear infinite; font-size: 24px; }
+  <!-- floating shapes -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0; 6 -12; 0 0" dur="7s" repeatCount="indefinite" additive="sum" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1"/>
+    <animateTransform attributeName="transform" type="rotate" values="-8 88 68; 6 88 68; -8 88 68" dur="7s" repeatCount="indefinite" additive="sum" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1"/>
+    <rect x="62" y="42" width="64" height="64" fill="#141414"/>
+    <rect x="56" y="36" width="64" height="64" fill="#FFD23F" stroke="#141414" stroke-width="4"/>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0; -8 10; 0 0" dur="8s" repeatCount="indefinite" additive="sum" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1"/>
+    <animateTransform attributeName="transform" type="rotate" values="10 158 228; -6 158 228; 10 158 228" dur="8s" repeatCount="indefinite" additive="sum" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1"/>
+    <circle cx="164" cy="234" r="28" fill="#141414"/>
+    <circle cx="158" cy="228" r="28" fill="#FF5DA2" stroke="#141414" stroke-width="4"/>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0; -8 10; 0 0" dur="9s" repeatCount="indefinite" additive="sum" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1"/>
+    <animateTransform attributeName="transform" type="rotate" values="10 765 80; -6 765 80; 10 765 80" dur="9s" repeatCount="indefinite" additive="sum" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1"/>
+    <rect x="726" y="66" width="90" height="40" rx="20" fill="#141414"/>
+    <rect x="720" y="60" width="90" height="40" rx="20" fill="#3ECF8E" stroke="#141414" stroke-width="4"/>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0; 6 -12; 0 0" dur="6.5s" repeatCount="indefinite" additive="sum" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1"/>
+    <animateTransform attributeName="transform" type="rotate" values="-8 814 216; 6 814 216; -8 814 216" dur="6.5s" repeatCount="indefinite" additive="sum" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1"/>
+    <rect x="794" y="196" width="52" height="52" fill="#141414"/>
+    <rect x="788" y="190" width="52" height="52" fill="#4D7CFE" stroke="#141414" stroke-width="4"/>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0; 8 8; 0 0" dur="7.5s" repeatCount="indefinite" additive="sum" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1"/>
+    <animateTransform attributeName="transform" type="rotate" values="-4 78 148; 10 78 148; -4 78 148" dur="7.5s" repeatCount="indefinite" additive="sum" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1"/>
+    <circle cx="84" cy="154" r="18" fill="#141414"/>
+    <circle cx="78" cy="148" r="18" fill="#A78BFA" stroke="#141414" stroke-width="4"/>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0; 8 8; 0 0" dur="8.5s" repeatCount="indefinite" additive="sum" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1"/>
+    <animateTransform attributeName="transform" type="rotate" values="-4 710 160; 10 710 160; -4 710 160" dur="8.5s" repeatCount="indefinite" additive="sum" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1"/>
+    <rect x="696" y="146" width="40" height="40" fill="#141414"/>
+    <rect x="690" y="140" width="40" height="40" fill="#FF8A3D" stroke="#141414" stroke-width="4"/>
+  </g>
 
-        /* ---- center card ---- */
-        .content {
-          position: absolute; top: 50%; left: 50%;
-          transform: translate(-50%, -54%);
-          text-align: center; z-index: 10;
-        }
-        .card {
-          display: inline-block;
-          background: #FFFFFF;
-          border: 4px solid #141414;
-          box-shadow: 8px 8px 0 0 #141414;
-          padding: 18px 42px;
-          animation: wobble 5s ease-in-out infinite;
-        }
-        .hello {
-          font-size: 11px; font-weight: 700;
-          letter-spacing: 0.35em; text-transform: uppercase;
-          color: #141414;
-        }
-        .name {
-          font-family: 'Archivo Black', 'Arial Black', Arial, sans-serif;
-          font-size: 46px; font-weight: 900;
-          letter-spacing: 0.02em; line-height: 1.05;
-          color: #141414;
-          margin-top: 6px;
-        }
-        .name .accent { color: #FF5DA2; }
-        .rule {
-          width: 180px; height: 8px; margin: 12px auto 10px;
-          background: repeating-linear-gradient(90deg,
-            #FFD23F 0 30px, #FF5DA2 30px 60px, #4D7CFE 60px 90px,
-            #3ECF8E 90px 120px, #A78BFA 120px 150px, #FF8A3D 150px 180px);
-          border: 2px solid #141414;
-        }
-        .sub {
-          font-size: 11px; font-weight: 700;
-          letter-spacing: 0.24em; text-transform: uppercase;
-          white-space: nowrap;
-          color: #141414;
-        }
+  <!-- spinning sparkles -->
+  <text x="215" y="62" font-family="Arial, sans-serif" font-size="34" font-weight="900" fill="#141414" text-anchor="middle" dominant-baseline="central">✦
+    <animateTransform attributeName="transform" type="rotate" values="0 215 62; 360 215 62" dur="12s" repeatCount="indefinite"/>
+  </text>
+  <text x="855" y="182" font-family="Arial, sans-serif" font-size="34" font-weight="900" fill="#141414" text-anchor="middle" dominant-baseline="central">✦
+    <animateTransform attributeName="transform" type="rotate" values="0 855 182; -360 855 182" dur="15s" repeatCount="indefinite"/>
+  </text>
+  <text x="650" y="56" font-family="Arial, sans-serif" font-size="24" font-weight="900" fill="#141414" text-anchor="middle" dominant-baseline="central">✦
+    <animateTransform attributeName="transform" type="rotate" values="0 650 56; 360 650 56" dur="18s" repeatCount="indefinite"/>
+  </text>
 
-        /* ---- bottom marquee ---- */
-        .marquee {
-          position: absolute; bottom: 0; left: 0;
-          width: 100%; height: 42px;
-          background: #141414;
-          border-top: 4px solid #141414;
-          overflow: hidden;
-          display: flex; align-items: center;
-        }
-        .track {
-          display: flex; white-space: nowrap;
-          width: max-content;
-          animation: scroll 22s linear infinite;
-        }
-        .track span {
-          font-size: 13px; font-weight: 700;
-          letter-spacing: 0.25em; text-transform: uppercase;
-          padding: 0 18px;
-          color: #FFF3E4;
-        }
-        .track .y { color: #FFD23F; }
-        .track .p { color: #FF5DA2; }
-        .track .b { color: #4D7CFE; }
-        .track .g { color: #3ECF8E; }
-        .track .v { color: #A78BFA; }
-        .track .o { color: #FF8A3D; }
-        .track .sep { color: #FFF3E4; padding: 0 2px; }
+  <!-- center card -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" values="-1.2 450 150; 1.2 450 150; -1.2 450 150" dur="5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1"/>
+    <rect x="198" y="63" width="520" height="190" fill="#141414"/>
+    <rect x="190" y="55" width="520" height="190" fill="#FFFFFF" stroke="#141414" stroke-width="4"/>
+    <text x="450" y="92" font-family="'Courier New', monospace" font-size="11" font-weight="700" letter-spacing="3.85" fill="#141414" text-anchor="middle">// HELLO, I'M</text>
+    <text x="450" y="136" font-family="'Arial Black', Arial, sans-serif" font-size="46" font-weight="900" letter-spacing="1" fill="#141414" text-anchor="middle">ANDREW</text>
+    <text x="450" y="180" font-family="'Arial Black', Arial, sans-serif" font-size="46" font-weight="900" letter-spacing="1" fill="#FF5DA2" text-anchor="middle">ROBIDA</text>
+    <g>
+      <rect x="360" y="192" width="30" height="8" fill="#FFD23F"/>
+      <rect x="390" y="192" width="30" height="8" fill="#FF5DA2"/>
+      <rect x="420" y="192" width="30" height="8" fill="#4D7CFE"/>
+      <rect x="450" y="192" width="30" height="8" fill="#3ECF8E"/>
+      <rect x="480" y="192" width="30" height="8" fill="#A78BFA"/>
+      <rect x="510" y="192" width="30" height="8" fill="#FF8A3D"/>
+      <rect x="360" y="192" width="180" height="8" fill="none" stroke="#141414" stroke-width="2"/>
+    </g>
+    <text x="450" y="230" font-family="'Courier New', monospace" font-size="12" font-weight="700" letter-spacing="2.88" fill="#141414" text-anchor="middle">PRODUCT ENGINEER · MARINE · BUILDER</text>
+  </g>
 
-        /* ---- corner bolts ---- */
-        .bolt {
-          position: absolute; width: 12px; height: 12px;
-          background: #FFF3E4; border: 3px solid #141414; border-radius: 50%;
-          z-index: 20;
-        }
-        .btl { top: 12px; left: 12px; }
-        .btr { top: 12px; right: 12px; }
-        .bbl { bottom: 54px; left: 12px; }
-        .bbr { bottom: 54px; right: 12px; }
+  <!-- corner bolts -->
+  <circle cx="18" cy="18" r="6" fill="#FFF3E4" stroke="#141414" stroke-width="3"/>
+  <circle cx="882" cy="18" r="6" fill="#FFF3E4" stroke="#141414" stroke-width="3"/>
+  <circle cx="18" cy="266" r="6" fill="#FFF3E4" stroke="#141414" stroke-width="3"/>
+  <circle cx="882" cy="266" r="6" fill="#FFF3E4" stroke="#141414" stroke-width="3"/>
 
-        @keyframes wobble {
-          0%, 100% { transform: rotate(-1.2deg); }
-          50% { transform: rotate(1.2deg); }
-        }
-        @keyframes float-a {
-          0%, 100% { transform: translate(0, 0) rotate(-8deg); }
-          50% { transform: translate(6px, -12px) rotate(6deg); }
-        }
-        @keyframes float-b {
-          0%, 100% { transform: translate(0, 0) rotate(10deg); }
-          50% { transform: translate(-8px, 10px) rotate(-6deg); }
-        }
-        @keyframes float-c {
-          0%, 100% { transform: translate(0, 0) rotate(-4deg); }
-          50% { transform: translate(8px, 8px) rotate(10deg); }
-        }
-        @keyframes spin { to { transform: rotate(360deg); } }
-        @keyframes scroll { to { transform: translateX(-50%); } }
-      </style>
+  <!-- marquee -->
+  <rect x="4" y="276" width="892" height="40" fill="#141414"/>
+  <g font-family="'Courier New', monospace" font-size="13" font-weight="700" letter-spacing="3">
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0; -1700 0" dur="24s" repeatCount="indefinite"/>
+      <text x="0" y="301" textLength="1700" lengthAdjust="spacingAndGlyphs"><tspan fill="#FFD23F">FULL-STACK DEVELOPER</tspan><tspan fill="#FFF3E4"> • </tspan><tspan fill="#FF5DA2">U.S. MARINE</tspan><tspan fill="#FFF3E4"> • </tspan><tspan fill="#4D7CFE">PRODUCT ENGINEER</tspan><tspan fill="#FFF3E4"> • </tspan><tspan fill="#3ECF8E">AI BUILDER</tspan><tspan fill="#FFF3E4"> • </tspan><tspan fill="#A78BFA">SERVERLESS ARCHITECT</tspan><tspan fill="#FFF3E4"> • </tspan><tspan fill="#FF8A3D">WEB PERFORMANCE NERD</tspan><tspan fill="#FFF3E4"> • </tspan><tspan fill="#FFD23F">LOCAL-FIRST ADVOCATE</tspan><tspan fill="#FFF3E4"> • </tspan><tspan fill="#FF5DA2">PROBLEM SOLVER</tspan><tspan fill="#FFF3E4"> • </tspan></text>
+      <text x="1700" y="301" textLength="1700" lengthAdjust="spacingAndGlyphs"><tspan fill="#FFD23F">FULL-STACK DEVELOPER</tspan><tspan fill="#FFF3E4"> • </tspan><tspan fill="#FF5DA2">U.S. MARINE</tspan><tspan fill="#FFF3E4"> • </tspan><tspan fill="#4D7CFE">PRODUCT ENGINEER</tspan><tspan fill="#FFF3E4"> • </tspan><tspan fill="#3ECF8E">AI BUILDER</tspan><tspan fill="#FFF3E4"> • </tspan><tspan fill="#A78BFA">SERVERLESS ARCHITECT</tspan><tspan fill="#FFF3E4"> • </tspan><tspan fill="#FF8A3D">WEB PERFORMANCE NERD</tspan><tspan fill="#FFF3E4"> • </tspan><tspan fill="#FFD23F">LOCAL-FIRST ADVOCATE</tspan><tspan fill="#FFF3E4"> • </tspan><tspan fill="#FF5DA2">PROBLEM SOLVER</tspan><tspan fill="#FFF3E4"> • </tspan></text>
+    </g>
+  </g>
 
-      <div class="c">
-        <div class="shape s1"></div>
-        <div class="shape s2"></div>
-        <div class="shape s3"></div>
-        <div class="shape s4"></div>
-        <div class="shape s5"></div>
-        <div class="shape s6"></div>
-        <div class="spark sp1">✦</div>
-        <div class="spark sp2">✦</div>
-        <div class="spark sp3">✦</div>
-
-        <div class="content">
-          <div class="card">
-            <div class="hello">// hello, I'm</div>
-            <div class="name">ANDREW <span class="accent">ROBIDA</span></div>
-            <div class="rule"></div>
-            <div class="sub">product engineer · marine · builder</div>
-          </div>
-        </div>
-
-        <div class="marquee">
-          <div class="track">
-            <span class="y">Full-Stack Developer</span><span class="sep">✦</span>
-            <span class="p">U.S. Marine</span><span class="sep">✦</span>
-            <span class="b">Product Engineer</span><span class="sep">✦</span>
-            <span class="g">AI Builder</span><span class="sep">✦</span>
-            <span class="v">Serverless Architect</span><span class="sep">✦</span>
-            <span class="o">Web Performance Nerd</span><span class="sep">✦</span>
-            <span class="y">Local-First Advocate</span><span class="sep">✦</span>
-            <span class="p">Problem Solver</span><span class="sep">✦</span>
-            <span class="y">Full-Stack Developer</span><span class="sep">✦</span>
-            <span class="p">U.S. Marine</span><span class="sep">✦</span>
-            <span class="b">Product Engineer</span><span class="sep">✦</span>
-            <span class="g">AI Builder</span><span class="sep">✦</span>
-            <span class="v">Serverless Architect</span><span class="sep">✦</span>
-            <span class="o">Web Performance Nerd</span><span class="sep">✦</span>
-            <span class="y">Local-First Advocate</span><span class="sep">✦</span>
-            <span class="p">Problem Solver</span><span class="sep">✦</span>
-          </div>
-        </div>
-
-        <div class="bolt btl"></div>
-        <div class="bolt btr"></div>
-        <div class="bolt bbl"></div>
-        <div class="bolt bbr"></div>
-      </div>
-    </div>
-  </foreignObject>
+  <!-- frame -->
+  <rect x="2" y="2" width="896" height="316" fill="none" stroke="#141414" stroke-width="4"/>
 </svg>
