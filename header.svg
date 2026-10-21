@@ -1,0 +1,210 @@
+<svg fill="none" viewBox="0 0 900 320" width="900" height="320" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .c {
+          width: 900px; height: 320px;
+          background: #FFF3E4;
+          background-image: radial-gradient(#14141422 1.5px, transparent 1.5px);
+          background-size: 18px 18px;
+          position: relative; overflow: hidden;
+          font-family: 'JetBrains Mono', 'Courier New', monospace;
+          border: 4px solid #141414;
+        }
+
+        /* ---- floating brutalist shapes ---- */
+        .shape {
+          position: absolute;
+          border: 4px solid #141414;
+          box-shadow: 6px 6px 0 0 #141414;
+        }
+        .s1 { /* yellow square */
+          width: 64px; height: 64px; background: #FFD23F;
+          top: 36px; left: 56px;
+          animation: float-a 7s ease-in-out infinite;
+        }
+        .s2 { /* pink circle */
+          width: 56px; height: 56px; background: #FF5DA2; border-radius: 50%;
+          top: 200px; left: 130px;
+          animation: float-b 8s ease-in-out infinite;
+        }
+        .s3 { /* green pill */
+          width: 90px; height: 40px; background: #3ECF8E; border-radius: 999px;
+          top: 60px; right: 90px;
+          animation: float-b 9s ease-in-out infinite;
+        }
+        .s4 { /* blue square */
+          width: 52px; height: 52px; background: #4D7CFE;
+          top: 190px; right: 60px;
+          animation: float-a 6.5s ease-in-out infinite;
+        }
+        .s5 { /* purple circle */
+          width: 36px; height: 36px; background: #A78BFA; border-radius: 50%;
+          top: 130px; left: 60px;
+          animation: float-c 7.5s ease-in-out infinite;
+        }
+        .s6 { /* orange square */
+          width: 40px; height: 40px; background: #FF8A3D;
+          top: 140px; right: 170px;
+          animation: float-c 8.5s ease-in-out infinite;
+        }
+        .spark {
+          position: absolute; border: none; box-shadow: none;
+          font-size: 34px; font-weight: 900; color: #141414;
+          font-family: 'Arial Black', Arial, sans-serif;
+        }
+        .sp1 { top: 30px; left: 200px; animation: spin 12s linear infinite; }
+        .sp2 { top: 150px; right: 40px; animation: spin 15s linear infinite reverse; }
+        .sp3 { top: 40px; right: 240px; animation: spin 18s linear infinite; font-size: 24px; }
+
+        /* ---- center card ---- */
+        .content {
+          position: absolute; top: 50%; left: 50%;
+          transform: translate(-50%, -54%);
+          text-align: center; z-index: 10;
+        }
+        .card {
+          display: inline-block;
+          background: #FFFFFF;
+          border: 4px solid #141414;
+          box-shadow: 8px 8px 0 0 #141414;
+          padding: 18px 42px;
+          animation: wobble 5s ease-in-out infinite;
+        }
+        .hello {
+          font-size: 11px; font-weight: 700;
+          letter-spacing: 0.35em; text-transform: uppercase;
+          color: #141414;
+        }
+        .name {
+          font-family: 'Archivo Black', 'Arial Black', Arial, sans-serif;
+          font-size: 46px; font-weight: 900;
+          letter-spacing: 0.02em; line-height: 1.05;
+          color: #141414;
+          margin-top: 6px;
+        }
+        .name .accent { color: #FF5DA2; }
+        .rule {
+          width: 180px; height: 8px; margin: 12px auto 10px;
+          background: repeating-linear-gradient(90deg,
+            #FFD23F 0 30px, #FF5DA2 30px 60px, #4D7CFE 60px 90px,
+            #3ECF8E 90px 120px, #A78BFA 120px 150px, #FF8A3D 150px 180px);
+          border: 2px solid #141414;
+        }
+        .sub {
+          font-size: 11px; font-weight: 700;
+          letter-spacing: 0.24em; text-transform: uppercase;
+          white-space: nowrap;
+          color: #141414;
+        }
+
+        /* ---- bottom marquee ---- */
+        .marquee {
+          position: absolute; bottom: 0; left: 0;
+          width: 100%; height: 42px;
+          background: #141414;
+          border-top: 4px solid #141414;
+          overflow: hidden;
+          display: flex; align-items: center;
+        }
+        .track {
+          display: flex; white-space: nowrap;
+          width: max-content;
+          animation: scroll 22s linear infinite;
+        }
+        .track span {
+          font-size: 13px; font-weight: 700;
+          letter-spacing: 0.25em; text-transform: uppercase;
+          padding: 0 18px;
+          color: #FFF3E4;
+        }
+        .track .y { color: #FFD23F; }
+        .track .p { color: #FF5DA2; }
+        .track .b { color: #4D7CFE; }
+        .track .g { color: #3ECF8E; }
+        .track .v { color: #A78BFA; }
+        .track .o { color: #FF8A3D; }
+        .track .sep { color: #FFF3E4; padding: 0 2px; }
+
+        /* ---- corner bolts ---- */
+        .bolt {
+          position: absolute; width: 12px; height: 12px;
+          background: #FFF3E4; border: 3px solid #141414; border-radius: 50%;
+          z-index: 20;
+        }
+        .btl { top: 12px; left: 12px; }
+        .btr { top: 12px; right: 12px; }
+        .bbl { bottom: 54px; left: 12px; }
+        .bbr { bottom: 54px; right: 12px; }
+
+        @keyframes wobble {
+          0%, 100% { transform: rotate(-1.2deg); }
+          50% { transform: rotate(1.2deg); }
+        }
+        @keyframes float-a {
+          0%, 100% { transform: translate(0, 0) rotate(-8deg); }
+          50% { transform: translate(6px, -12px) rotate(6deg); }
+        }
+        @keyframes float-b {
+          0%, 100% { transform: translate(0, 0) rotate(10deg); }
+          50% { transform: translate(-8px, 10px) rotate(-6deg); }
+        }
+        @keyframes float-c {
+          0%, 100% { transform: translate(0, 0) rotate(-4deg); }
+          50% { transform: translate(8px, 8px) rotate(10deg); }
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        @keyframes scroll { to { transform: translateX(-50%); } }
+      </style>
+
+      <div class="c">
+        <div class="shape s1"></div>
+        <div class="shape s2"></div>
+        <div class="shape s3"></div>
+        <div class="shape s4"></div>
+        <div class="shape s5"></div>
+        <div class="shape s6"></div>
+        <div class="spark sp1">✦</div>
+        <div class="spark sp2">✦</div>
+        <div class="spark sp3">✦</div>
+
+        <div class="content">
+          <div class="card">
+            <div class="hello">// hello, I'm</div>
+            <div class="name">ANDREW <span class="accent">ROBIDA</span></div>
+            <div class="rule"></div>
+            <div class="sub">product engineer · marine · builder</div>
+          </div>
+        </div>
+
+        <div class="marquee">
+          <div class="track">
+            <span class="y">Full-Stack Developer</span><span class="sep">✦</span>
+            <span class="p">U.S. Marine</span><span class="sep">✦</span>
+            <span class="b">Product Engineer</span><span class="sep">✦</span>
+            <span class="g">AI Builder</span><span class="sep">✦</span>
+            <span class="v">Serverless Architect</span><span class="sep">✦</span>
+            <span class="o">Web Performance Nerd</span><span class="sep">✦</span>
+            <span class="y">Local-First Advocate</span><span class="sep">✦</span>
+            <span class="p">Problem Solver</span><span class="sep">✦</span>
+            <span class="y">Full-Stack Developer</span><span class="sep">✦</span>
+            <span class="p">U.S. Marine</span><span class="sep">✦</span>
+            <span class="b">Product Engineer</span><span class="sep">✦</span>
+            <span class="g">AI Builder</span><span class="sep">✦</span>
+            <span class="v">Serverless Architect</span><span class="sep">✦</span>
+            <span class="o">Web Performance Nerd</span><span class="sep">✦</span>
+            <span class="y">Local-First Advocate</span><span class="sep">✦</span>
+            <span class="p">Problem Solver</span><span class="sep">✦</span>
+          </div>
+        </div>
+
+        <div class="bolt btl"></div>
+        <div class="bolt btr"></div>
+        <div class="bolt bbl"></div>
+        <div class="bolt bbr"></div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
